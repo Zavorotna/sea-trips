@@ -136,10 +136,12 @@
         content: ""
         position: absolute
         top: 0.4rem
-        left: 0.7rem
+        left: 0.4rem
         width: 1.2rem
         height: 0.9rem
         background: url("../img/cloud.png")
+        +media(2200)
+            background-size: 90%
 
 =media($size)
     @media screen and (min-width: #{$size}px)

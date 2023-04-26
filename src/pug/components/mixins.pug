@@ -128,9 +128,9 @@ mixin serviceCard(cardService)
 
 mixin cardSave(fileSave)
     .card-savefile
-        .img-block.d-flex.justify-content-between
+        .img-block.d-flex
             img.px-3(src=fileSave.img, alt=fileSave.alt class="img")
-            .file-block
+            .file-block.px-3
                 p.text #{fileSave.text}
                 p.sizetext #{fileSave.sizetext}
         .row
