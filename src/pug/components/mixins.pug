@@ -1,0 +1,139 @@
+-
+    let firstCard = {
+        velosport: {
+            img: "img/velo-icon.png",
+            alt: "velo",
+            head: "Тур на велосипедах",
+            price: "335",
+            currensy: "грн*",
+            description: "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+        },
+        excursion: {
+            img: "img/circle.png",
+            alt: "excursion",
+            head: "Екскурсія на острів",
+            price: "500",
+            currensy: "грн*",
+            description: "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+        },
+        special: {
+            img: "img/think.png",
+            alt: "Особливе замовлення",
+            head: "Особливе замовлення",
+            price: "250",
+            currensy: "грн*",
+            description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.",
+        },
+    }
+
+mixin card(firstCard)
+    figure.first-card.my-0.mx-0
+        figcaption.py-3.px-3.w-100
+            a(href="#") 
+                .block
+                .text-center
+                    img(src=firstCard.img, alt=firstCard.alt class="img")
+                    p.head.pt-4 #{firstCard.head}
+                    p.price #{firstCard.price}
+                        span.currensy #{firstCard.currensy}
+                p.description #{firstCard.description}
+
+mixin star(star)
+    p.flag
+        svg.star(xmlns="http://www.w3.org/2000/svg" width="1rem" height="12rem" fill="#ffffff" class="bi bi-star-fill" viewBox="0 0 16 16")
+            path(d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z")
+
+mixin veloBox 
+    p.velo-box 
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="3.5rem" fill="#ffffff")
+            path(d="M400 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm27.2 64l-61.8-48.8c-17.3-13.6-41.7-13.8-59.1-.3l-83.1 64.2c-30.7 23.8-28.5 70.8 4.3 91.6L288 305.1V416c0 17.7 14.3 32 32 32s32-14.3 32-32V288c0-10.7-5.3-20.7-14.2-26.6L295 232.9l60.3-48.5L396 217c5.7 4.5 12.7 7 20 7h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H427.2zM56 384a72 72 0 1 1 144 0A72 72 0 1 1 56 384zm200 0A128 128 0 1 0 0 384a128 128 0 1 0 256 0zm184 0a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zm200 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z")
+-
+    let 
+        cardService = {
+            romantic: {
+                img: "img/boat.webp",
+                alt: "Романтична подорож на 2, Подорож у найромантичніші куточки світу",
+                propose: "Романтична подорож на 2",
+                descriptionService: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+                priceServise: "2599",
+                currensyService: "грн.",
+                ctaText: "замовити",
+                href: "#",
+            },
+            velotour: {
+                img: "img/velo.webp",
+                alt: "Велотур,прокататись з вітерцем, та ще й з критим краєвидом довкола ",
+                propose: "Велотур",
+                descriptionService: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+                priceServise: "555",
+                currensyService: "грн.",
+                ctaText: "замовити",
+                href: "#",
+            },
+            islandtour: {
+                img: "img/palm.webp",
+                alt: "На острови",
+                propose: "На острови!",
+                descriptionService: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+                priceServise: "1559",
+                currensyService: "грн.",
+                ctaText: "замовити",
+                href: "#",
+            },
+            serf: {
+                img: "img/serf.webp",
+                alt: "Катання на сьорфінгу",
+                propose: "Катання на сьорфінгу",
+                descriptionService: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+                priceServise: "999",
+                currensyService: "грн.",
+                ctaText: "замовити",
+                href: "#",
+            },
+        }
+
+mixin serviceCard(cardService) 
+    figure.last-card 
+        figcaption
+            img.card-img-top.left-box(src=cardService.img, alt=cardService.alt class="img")
+            .card-box.p-3
+                .text-box
+                    p.propose #{cardService.propose}
+                    p.descriptionService #{cardService.descriptionService}
+                .row
+                    p.priceServise.col-6 #{cardService.priceServise}
+                        span.currensy #{cardService.currensyService}
+                    a.col-6.pay.py-3(href=cardService.href) #{cardService.ctaText}
+
+-
+    let 
+        fileSave = {
+            grafic: {
+                img: "img/file.png",
+                text: "Графік роботи готелів.xls",
+                sizetext: "Розмір файла: 10Mb",
+                descript: "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
+                download: "скачати",
+                href: "#",
+            },
+            food: {
+                img: "img/file.png",
+                text: "Інформація про харчування.xls",
+                sizetext: "Розмір файла: 10Mb",
+                descript: "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
+                download: "скачати",
+                href: "#",
+            },
+        }
+
+mixin cardSave(fileSave)
+    .card-savefile
+        .img-block.d-flex.justify-content-between
+            img.px-3(src=fileSave.img, alt=fileSave.alt class="img")
+            .file-block
+                p.text #{fileSave.text}
+                p.sizetext #{fileSave.sizetext}
+        .row
+            p.descript.py-5 #{fileSave.descript}
+        .row.p-2
+            a.col-4.download-cta.my-3.py-1.text-end(href=fileSave.href) #{fileSave.download}

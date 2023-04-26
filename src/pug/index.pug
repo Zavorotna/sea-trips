@@ -1,0 +1,147 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport" content="width=device-width, uset-scalabel=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="css/styles.css")
+        title Document
+    body
+        include components/mixins
+        header 
+            nav.navbar.navbar-expand-lg.bcg-nav.container.pb-3.navbar-dark
+                .container-fluid.d-flex.justify-content-between.gap-3.py-5
+                    a.navbar-brand.logo(href='#') 
+                        img(src="img/logo.png", alt="")
+                    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    .collapse.navbar-collapse#navbarSupportedContent
+                        ul.navbar-nav.me-auto.mb-2.mb-lg-0.flex-shrink-1.pt-2
+                            li.nav-item.ps-3
+                                a.nav-link.color(aria-current='page', href='#') головна      
+                            li.nav-item.ps-3
+                                a.nav-link.color(href='#') послуги     
+                            li.nav-item.ps-3
+                                a.nav-link.color.nowrap-nav(href='#') про компанію     
+                            li.nav-item.ps-3
+                                a.nav-link.color(href='#') акції     
+                            li.nav-item.ps-3
+                                a.nav-link.color(href='#') партнери      
+                            li.nav-item.ps-3
+                                a.nav-link.color(href='#') відгуки      
+                            li.nav-item.ps-3
+                                a.nav-link.color(href='#') контакти
+            .main-container.border-main.container-fluid.text-center.mx-auto.py-5
+                h1 Морські пригоди
+                p.d-block.mx-auto.mb-0 Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                a.cta.my-4(href="#") детальніше
+            .container.scroll-bottom-block.text-center.py-5.mx-auto
+                h2.mx-auto.py-5 обери свій план подорожі
+                p Наша фірма -лідер на ринку у своїй сфері
+                a.double-arrow.pb-4(href="#cardfirst")
+        main
+            section.card-first.container#cardfirst
+                .row.container
+                    .about-company.col-lg-3
+                        h2 про нашу компанію
+                        p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                        a.cta.mt-4(href="#") детальніше
+                        p.note.py-3 * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                    .col
+                        .row
+                            .proposition.col-lg-4
+                                p 
+                                +card(firstCard.velosport)
+                            .proposition.col-lg-4
+                                +star
+                                +card(firstCard.excursion)
+                            .proposition.col-lg-4
+                                +star
+                                +card(firstCard.special)
+                                a(href="#") 
+                            .row.justify-content-center
+                                .col-sm-5.col-lg-4
+                                    a.plan.text-center.py-5(href="#") дивитись усі плани
+            hr.container.py-4
+            section.container.my-5
+                .row
+                    .montain.col-lg-4.me-3
+                        picture
+                            img.img-fluid.w-100.mb-5(src="img/island.webp", alt="")
+                    .descript-text.col
+                        h2 Дивовижний безлюдний острів, який зводить людей з розуму
+                        .row
+                            .tour.col-md-8
+                                p.py-4 Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                .d-flex
+                                    button.cta.me-2(type="submit") замовити тур
+                                    a.btn.me-2(href="#") детальніше
+                            .price-tour-box.col-md-4.p-2.m-lg-0.mx-auto.m-4.p-2.text-center
+                                p.price-tour.my-2 575 грн./день
+                                p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+            section.container-fluid.sea-bcg.py-5
+                .container.py-5
+                    .row 
+                        .col-md.my-5
+                            p.cl-white СПІЙМАЙ ХВИЛЮ
+                            p.cl-blue ЖИВИ ЯСКРАВО!
+                            p.serf-block Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                            a.cta(href="#") детальніше
+                        .col-md.border-box
+                            .text-center
+                                picture
+                                    img(src="img/lapki.svg", alt="")
+                            p.descript.my-5 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                            .text-center.client-box
+                                p.name-client.m-0 Олег Набережний
+                                p.client клієнт
+                                picture 
+                                    img.client-photo(src="img/client.webp", alt="")
+            section.container.my-5
+                .week-proposition.text-center
+                    h2 Спеціальні пропозиції тижня
+                    p Гарячі праозиції, по-швидше обирай і поїхали!
+                .row.py-5
+                    .col-sm-6.col-lg-3
+                        +star
+                        +serviceCard(cardService.romantic)
+                    .col-sm-6.col-lg-3
+                        +star
+                        +veloBox
+                        +serviceCard(cardService.velotour)
+                    .col-sm-6.col-lg-3
+                        +star
+                        +serviceCard(cardService.islandtour)
+                    .col-sm-6.col-lg-3
+                        +star
+                        +serviceCard(cardService.serf)
+            hr.container.mb-5
+            section.files.container.mb-5
+                .row.container
+                    .col-sm-12.col-lg
+                        p.info додаткова інформація
+                    .col-sm-6.col-lg.house.p-3.mb-3.mx-lg-2
+                        +cardSave(fileSave.grafic)
+                    .col-sm-6.col-lg.people.p-3.mb-3.mx-lg-2
+                        +cardSave(fileSave.food)
+                    .col-sm-12.col-lg.text-center.contacts.mb-3.mx-2
+                        p.quetion задати питання
+                        p.text-quetion Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                        .row
+                            svg.col-2.svg-phone(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16")
+                                path(fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z")
+                            a.col-9.pnone(href="tel:+380505698511") +38 (050) 56 98 511
+                        p.name-bottom.pt-2 Анна Миколаївна
+                        p.client консультант
+                        picture
+                            img.client-photo-bottom.p-0(src="img/bottomclient.webp", alt="")
+        footer
+            .bottom-bcg.mx-auto.p-0.container-fluid 
+                picture 
+                    img.img-fluid.w-100(src="img/footerfoto.webp", alt="")
+            .footer.text-center.p-2
+                p.copyright.m-2 &copy 2016 Cars.com All rights reserved.
+    script(src="js/scripts.js")

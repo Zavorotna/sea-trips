@@ -1,0 +1,148 @@
+=btn($fixed:true, $empty:false)
+    padding: 0.73rem 0
+    display: inline-block
+    text-align: center
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 300
+    color: #fefefe
+    background-color: #ffb700
+    filter: drop-shadow(0rem 0.26rem 0.7rem rgba(193,139,1,0.24))
+    border: 0.06rem solid transparent
+    border-radius: 23rem
+    transition: all 1s ease
+    &:hover
+        color: #ffb700
+        filter: drop-shadow(0rem 0.26rem 0.7rem rgba(193,139,1,0.24))
+        background-color: #fffaee
+        border: 0.06rem solid  #ffb700
+    @if $fixed
+        width: 11.5rem
+    @else 
+        width: 11.3rem
+    @if $empty
+        background-color: rgba(0,153,255,0)
+        border: 0.06rem solid #0099ff
+        color: #0099ff
+        &:hover
+            color: #fff
+            filter: drop-shadow(0rem 0.26rem 0.7rem rgba(193,139,1,0.24))
+            background-color: #0099ff
+            border: 0.06rem solid  #0099ff
+
+=circle-arrow($arrow)
+    &::before
+        content: ""
+        position: absolute
+        width: 0.8rem
+        height: 0.8rem
+        border-radius: 50%
+        @if $arrow
+            top: 43%
+            right: 5%
+            border: 0.06rem solid #0099ff
+        @else 
+            top: 31%
+            right: 10%
+            border: 0.06rem solid #ffb700
+    &::after
+        content: ""
+        position: absolute
+        width: 0.26rem
+        height: 0.26rem
+        transform: rotate(135deg)
+        @if $arrow
+            top: 46%
+            right: 6.5%
+            border-top: 0.06rem solid #0099ff
+            border-left: 0.06rem solid #0099ff
+        @else
+            top: 37%
+            right: 13%
+            border-top: 0.06rem solid #ffb700
+            border-left: 0.06rem solid #ffb700
+
+=flag($flag)
+    position: absolute
+    top: -1.64rem
+    left: -2.67rem
+    border: 2.67rem solid transparent
+    border-top-color: #26cb15
+    transform: rotate(135deg)
+    z-index: 3
+
+=veloBox($velobox)
+    position: absolute
+    width: 4rem
+    height: 14.4rem
+    top: 0
+    left: 0
+    background-color: #0099ff
+    z-index: 2
+
+=border($border)
+    &::before
+        content: ""
+        position: absolute
+        top: 0.33rem
+        left: 0
+        border: none
+        @if $border
+            width: 25%
+            height: 100%
+            border-top: 0.26rem solid #ffffff
+            border-left: 0.26rem solid #ffffff
+            border-bottom: 0.26rem solid #ffffff
+            opacity: 0.102
+        @else 
+            top: 0.8rem
+            width: 20%
+            height: 100%
+            border-top: 0.26rem solid #ffb700
+            border-left: 0.26rem solid #ffb700
+            border-bottom: 0.26rem solid #ffb700
+    &::after
+        content: ""
+        position: absolute
+        top: 0.33rem
+        right: 0
+        @if $border
+            width: 25%
+            height: 100%
+            border-top: 0.26rem solid #ffffff
+            border-right: 0.26rem solid #ffffff
+            border-bottom: 0.26rem solid #ffffff
+            opacity: 0.102
+        @else 
+            top: 0.8rem
+            width: 20%
+            height: 100%
+            border-top: 0.26rem solid #ffb700
+            border-right: 0.26rem solid #ffb700
+            border-bottom: 0.26rem solid #ffb700
+
+=cloud-btn($cloud)
+    position: relative
+    display: inline-block
+    font-size: 0.8rem
+    letter-spacing: 0rem
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    border-radius: 1rem
+    background-color: rgba(255,183,0,0)
+    border: 0.13rem solid #ffb700
+    &::before
+        content: ""
+        position: absolute
+        top: 0.4rem
+        left: 0.7rem
+        width: 1.2rem
+        height: 0.9rem
+        background: url("../img/cloud.png")
+
+=media($size)
+    @media screen and (min-width: #{$size}px)
+        @content 
+    
+

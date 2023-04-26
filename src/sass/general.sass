@@ -1,0 +1,446 @@
+@import components/mixins
+
+html
+    font-size: 12px
+    +media(768)
+        font-size: 13px
+    +media(1440)
+        font-size: 15px
+    +media(2200)
+        font-size: 30px
+
+header
+    background: url("../img/first-bcg.webp") no-repeat center/cover
+
+body 
+    font-family: "Rubik"
+    background-color: #f5f8fa
+ul
+    li
+        .color
+            font-size: 1rem
+            text-transform: uppercase
+            color: #fff
+            font-weight: 400
+            &:hover
+                color: #ffb700
+        .nowrap-nav 
+            min-width: 9rem
+
+a
+    text-decoration: none
+
+h1
+    font-size: 4.8rem
+    letter-spacing: 0.06rem
+    line-height: 1.5em
+    font-weight: 400
+    text-transform: uppercase
+    color: #ffffff
+
+hr
+    border: none
+    border-top: 0.15rem solid #dfe3e6
+
+.logo
+    width: none
+    +media(992)
+        width: 100% 
+
+.border-main 
+    &::before,
+    &::after
+        display: none
+    +media(768)
+        position: relative 
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 50%
+            width: 30%
+            height: 15%
+            border-top: 0.26rem solid #fff
+            border-left: 0.26rem solid #fff
+            border-right: 0.26rem solid #fff
+            opacity: 0.2
+            transform: translate(-50%)
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            bottom: 1.6rem
+            left: 50%
+            width: 30%
+            height: 25%
+            border-bottom: 0.26rem solid #fff
+            border-left: 0.26rem solid #fff
+            border-right: 0.26rem solid #fff
+            opacity: 0.2 
+            transform: translate(-50%)
+
+.main-container
+    p
+        max-width: 35.2rem
+        font-size: 1rem
+        line-height: 1.6rem
+        color: #ffffff
+        font-weight: 400
+        font-style: italic
+
+.cta 
+    +btn(true)
+
+.btn
+    +btn($empty:true)
+
+.scroll-bottom-block
+    h2
+        max-width: 23rem
+        font-size: 2.4rem
+        letter-spacing: 0.06rem
+        line-height: 1.2em
+        text-transform: uppercase
+        font-weight: 400
+        color: #333333
+    p
+        font-size: 1rem
+        line-height: 1.5em
+        color: #333333
+        font-weight: 400
+        font-style: italic
+
+.double-arrow
+    position: relative
+    display: inline-block
+    &::before
+        content: ""
+        position: absolute
+        top: 0.5rem
+        width: 0.8rem
+        height: 0.8rem
+        border-left: 0.13rem solid #000000
+        border-top: 0.13rem solid #000000
+        transform: rotate(-135deg)
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        width: 0.8rem
+        height: 0.8rem
+        border-left: 0.13rem solid #000000
+        border-top: 0.13rem solid #000000
+        transform: rotate(-135deg)
+.card-first
+    padding: 5rem 0 0
+
+.about-company
+    h2
+        font-size: 2.4rem
+        letter-spacing: 0.06rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+    p
+        font-size: 1rem
+        line-height: 1.4em
+        color: #555555
+        font-weight: 400
+        font-style: italic
+        
+p.note 
+    font-size: 0.9rem
+    line-height: 1.3rem
+    color: #bbbbbb
+    font-weight: 400
+
+.first-card
+    figcaption
+        min-width: 18rem
+        transition: all .5s ease
+        &:hover
+            filter: drop-shadow(0rem 0.26rem 0.7rem rgba(3,20,31,0.05))
+            background-color: #ffffff
+.flag
+    position: relative
+    &::before
+        content: ""
+        +flag(true)
+
+.star
+    position: absolute
+    top: -3.9rem
+    left: 0.6rem
+    z-index: 4
+
+.head 
+    font-size: 1.2rem
+    line-height: 1.4em
+    color: #333333
+    font-weight: 400
+
+.price
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: #0099ff
+    font-weight: 400
+
+.description
+    font-size: 0.9rem
+    line-height: 1.5em
+    color: #999999
+    font-weight: 400
+
+.plan
+    display: block
+    position: relative
+    font-size: 1.25rem
+    line-height: 1.2em
+    text-transform: uppercase
+    color: #0099ff
+    font-weight: 400
+    +circle-arrow(true)
+
+.descript-text
+    h2
+        font-size: 2.4rem
+        line-height: 1.1em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+
+.tour
+    p
+        font-size: 1rem
+        line-height: 1.5em
+        color: #333333
+        font-weight: 400
+        font-style: italic
+
+.price-tour-box
+    width: 100%
+    background-color: #edf2f5
+    +media(768)
+        max-width: 13rem
+    +media(1024)
+        max-width: 16rem
+    p
+        font-size: 0.9rem
+        line-height: 1.6em
+        color: #999999
+        font-weight: 400
+
+p.price-tour
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: #0099ff
+    font-weight: 400
+
+.sea-bcg
+    background: url("../img/second-bcg.webp") no-repeat center/cover
+
+.cl-white
+    font-size: 3.7rem
+    letter-spacing: 0.1rem
+    line-height: 1.2em
+    text-transform: uppercase
+    color: #ffffff
+
+.cl-blue
+    font-size: 3.7rem
+    letter-spacing: 0.1rem
+    line-height: 1.2em
+    text-transform: uppercase
+    color: #0099ff
+
+.serf-block
+    font-size: 1rem
+    line-height: 1.5em
+    color: #ffffff
+    font-weight: 400
+    font-family: "PT Sans"
+
+.border-box
+    min-height: 20rem
+    max-height: 20rem
+    position: relative
+    +border(true)
+
+.descript
+    font-size: 1rem
+    line-height: 1.6em
+    color: #ffffff
+    font-weight: 400
+    font-style: italic
+
+.client-box
+    position: relative
+    top: 0
+    left: 0
+
+.name-client
+    font-size: 1.2rem
+    line-height: 1.4em
+    color: #ffffff
+    font-weight: 400
+
+.client
+    font-size: 1rem
+    line-height: 1.35em
+    color: #999999
+    font-weight: 400
+
+.client-photo
+    border-radius: 50%
+
+.week-proposition
+    position: relative
+    h2
+        font-size: 2.4rem
+        line-height: 1.2em
+        text-transform: uppercase
+        color: #333333
+        font-weight: 400
+    p
+        font-size: 1rem
+        line-height: 1.5em
+        color: #333333
+        font-weight: 400
+        font-style: italic
+
+.velo-box
+    position: relative
+    &::before  
+        content: ""
+        +veloBox(true)
+    svg
+        position: absolute
+        top: 5rem
+        left: 0.25rem
+        z-index: 4
+
+.last-card
+    transition: all .5s ease
+    &:hover
+        box-shadow: 0rem 0.26rem 0.7rem rgba(3,20,31,0.05)
+        background-color: #ffffff
+
+.text-box
+    min-height: 10rem
+    
+.propose
+    font-size: 1.2rem
+    line-height: 1.4em
+    color: #333333
+    font-weight: 400
+
+.descriptionService
+    font-size: 1rem
+    line-height: 1.5em
+    color: #999999
+    font-weight: 400
+
+.priceServise
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: #0099ff
+    font-weight: 400
+
+.pay
+    position: relative
+    display: inline-block
+    font-size: 0.8rem
+    letter-spacing: 0.06rem
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    +circle-arrow(false)
+
+.info
+    font-size: 2.4rem
+    letter-spacing: 0.06rem
+    line-height: 1.1em
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+
+.house
+    background: url("../img/house.webp") no-repeat center/cover
+
+.people
+    background: url("../img/people.webp") no-repeat center/cover
+
+.img-block
+    max-height: 3.3rem
+
+.text
+    font-size: 1.2rem
+    line-height: 1.3em
+    color: #ffffff
+    font-weight: 400
+
+.sizetext
+    font-size: 0.9rem
+    line-height: 1.4em
+    color: #bbbbbb
+    font-weight: 400
+
+.descript
+    max-height: 6.7rem
+    font-size: 1rem
+    line-height: 1.4em
+    color: #fefefe
+    font-weight: 400
+
+.download-cta
+    +cloud-btn(true)
+
+.contacts
+    position: relative
+    top: -0.67rem
+    +border(false)
+
+.quetion
+    font-size: 1.2rem
+    letter-spacing: 0.06rem
+    line-height: 1.4em
+    color: #333333
+    font-weight: 400
+
+.text-quetion
+    font-size: 0.9rem
+    line-height: 1.2em
+    color: #999999
+    font-weight: 400
+
+.svg-phone
+    position: relative
+    top: 0rem
+    left: 4rem
+    fill: #0099ff
+
+.phone,
+.name-bottom
+    font-size: 1.2rem
+    line-height: 1.4em
+    color: #0099ff
+    font-weight: 400
+
+.name-bottom
+    color: #333333
+
+.client-photo-bottom
+    position: relative
+    top: 3rem
+    border-radius: 50%
+
+.footer
+    background-color: #1a1a1a
+
+.copyright
+    font-size: 0.9rem
+    line-height: 0.1em
+    color: #ffffff
+    font-weight: 400
