@@ -132,6 +132,7 @@
     border-radius: 1rem
     background-color: rgba(255,183,0,0)
     border: 0.13rem solid #ffb700
+    transition: all .5s ease
     &::before
         content: ""
         position: absolute
@@ -142,6 +143,8 @@
         background: url("../img/cloud.png")
         +media(2200)
             background-size: 90%
+    &:hover
+        background-color: #fff
 
 =media($size)
     @media screen and (min-width: #{$size}px)
