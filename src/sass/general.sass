@@ -368,11 +368,16 @@ p.price-tour
     text-transform: uppercase
     color: #333333
     font-weight: 400
+    text-align: center
+    +media(1024)
+        text-align: start
 
 .house
+    max-width: 20rem
     background: url("../img/house.webp") no-repeat center/cover
 
 .people
+    max-width: 20rem
     background: url("../img/people.webp") no-repeat center/cover
 
 .img-block
