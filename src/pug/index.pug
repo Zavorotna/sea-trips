@@ -31,17 +31,17 @@ html(lang="en")
                             li.nav-item.ps-3
                                 a.nav-link.color(aria-current='page', href='#') головна      
                             li.nav-item.ps-3
-                                a.nav-link.color(href='#') послуги     
+                                a.nav-link.color(href='#company') послуги     
                             li.nav-item.ps-3
-                                a.nav-link.color.nowrap-nav(href='#') про компанію     
+                                a.nav-link.color.nowrap-nav(href='#company') про компанію     
                             li.nav-item.ps-3
-                                a.nav-link.color(href='#') акції     
+                                a.nav-link.color(href='#special') акції     
                             li.nav-item.ps-3
                                 a.nav-link.color(href='#') партнери      
                             li.nav-item.ps-3
-                                a.nav-link.color(href='#') відгуки      
+                                a.nav-link.color(href='#recencion') відгуки      
                             li.nav-item.ps-3
-                                a.nav-link.color(href='#') контакти
+                                a.nav-link.color(href='#contacts') контакти
             .main-container.border-main.container-fluid.text-center.mx-auto.py-5
                 h1 Морські пригоди
                 p.d-block.mx-auto.mb-0 Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
@@ -52,7 +52,7 @@ html(lang="en")
                 a.double-arrow.pb-5(href="#cardfirst")
         main
             section.card-first.container#cardfirst
-                .row.container
+                .row.container#company
                     .about-company.col-lg-3
                         h2 про нашу компанію
                         p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
@@ -90,7 +90,7 @@ html(lang="en")
                                 p.price-tour.my-2 575 грн./день
                                 p В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
             section.container-fluid.sea-bcg.py-5
-                .container.py-5
+                .container.py-5#recencion
                     .row 
                         .col-md.my-5
                             p.cl-white СПІЙМАЙ ХВИЛЮ
@@ -108,7 +108,7 @@ html(lang="en")
                                 picture 
                                     img.client-photo(src="img/client.webp", alt="")
             section.container.my-5
-                .week-proposition.text-center
+                .week-proposition.text-center#special
                     h2 Спеціальні пропозиції тижня
                     p Гарячі праозиції, по-швидше обирай і поїхали!
                 .row.py-5
@@ -126,7 +126,7 @@ html(lang="en")
                         +star
                         +serviceCard(cardService.serf)
             hr.container.mb-5
-            section.files.container.mb-5
+            section.files.container.mb-5#contacts
                 .row.container-fluid.gy-2.m-0.d-flex.justify-content-center.align-center.question-block
                     .col-sm-12.col-lg
                         p.info додаткова інформація
