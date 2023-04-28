@@ -34,31 +34,29 @@
     &::before
         content: ""
         position: absolute
-        width: 0.8rem
-        height: 0.8rem
+        top: 1rem
+        right: 0
+        width: 0.9rem
+        height: 0.9rem
         border-radius: 50%
         @if $arrow
-            top: 43%
-            right: 5%
             border: 0.06rem solid #0099ff
-        @else 
-            top: 31%
-            right: 10%
+        @else
+            right: 0.65rem
             border: 0.06rem solid #ffb700
     &::after
         content: ""
         position: absolute
-        width: 0.26rem
-        height: 0.26rem
+        top: 1.3rem
+        right: 0.35rem
+        width: 0.3rem
+        height: 0.3rem
         transform: rotate(135deg)
         @if $arrow
-            top: 46%
-            right: 6.5%
             border-top: 0.06rem solid #0099ff
             border-left: 0.06rem solid #0099ff
         @else
-            top: 37%
-            right: 13%
+            right: 1rem
             border-top: 0.06rem solid #ffb700
             border-left: 0.06rem solid #ffb700
 
@@ -72,13 +70,16 @@
     z-index: 3
 
 =veloBox($velobox)
-    position: absolute
-    width: 4rem
-    height: 14.4rem
-    top: 0
-    left: 0
-    background-color: #0099ff
-    z-index: 2
+    @if left-box
+        position: absolute
+        width: 4rem
+        height: 100%
+        top: 0
+        left: 0
+        background-color: #0099ff
+        z-index: 2
+    @else 
+        background-color: transparent
 
 =border($border)
     &::before
@@ -94,7 +95,7 @@
             border-left: 0.26rem solid #ffffff
             border-bottom: 0.26rem solid #ffffff
             opacity: 0.102
-        @else 
+        @else
             top: 0.8rem
             width: 20%
             height: 100%
@@ -124,6 +125,8 @@
 =cloud-btn($cloud)
     position: relative
     display: inline-block
+    padding: 0.3rem 1.5rem 0.3rem 2rem
+    margin: 2rem 0
     font-size: 0.8rem
     letter-spacing: 0rem
     text-transform: uppercase
@@ -136,13 +139,20 @@
     &::before
         content: ""
         position: absolute
-        top: 0.4rem
-        left: 0.4rem
-        width: 1.2rem
+        top: 0.3rem
+        left: 0.5rem
+        width: 1.35rem
         height: 0.9rem
         background: url("../img/cloud.png")
+        +media(1440)
+            top: 0.5rem
+            left: 0.5rem
+            width: 1rem
+            height: 0.8rem
         +media(2200)
-            background-size: 90%
+            width: 1.1rem
+            height: 0.8rem
+            background-size: 100%
     &:hover
         background-color: #fff
 
