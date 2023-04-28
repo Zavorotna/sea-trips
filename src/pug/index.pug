@@ -59,14 +59,14 @@ html(lang="en")
                         a.cta.mt-4(href="#") детальніше
                         p.note.py-3 * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     .col
-                        .row
-                            .proposition.col-lg-4
+                        .row.d-flex.justify-content-center.align-center
+                            .proposition.col.col-md-4
                                 p 
                                 +card(firstCard.velosport)
-                            .proposition.col-lg-4
+                            .proposition.col.col-md-4
                                 +star
                                 +card(firstCard.excursion)
-                            .proposition.col-lg-4
+                            .proposition.col.col-md-4
                                 +star
                                 +card(firstCard.special)
                                 a(href="#") 
@@ -111,18 +111,18 @@ html(lang="en")
                 .week-proposition.text-center#special
                     h2 Спеціальні пропозиції тижня
                     p Гарячі праозиції, по-швидше обирай і поїхали!
-                .row.py-5
-                    .col-sm-6.col-lg-3.my-2
+                .row.py-5.d-flex.justify-content-center.align-center
+                    .col-sm-6.col-lg-3.my-2.lastcard-service
                         +star
                         +serviceCard(cardService.romantic)
-                    .col-sm-6.col-lg-3.my-2
+                    .col-sm-6.col-lg-3.my-2.lastcard-service
                         +star
                         +veloBox
                         +serviceCard(cardService.velotour)
-                    .col-sm-6.col-lg-3.my-2
+                    .col-sm-6.col-lg-3.my-2.lastcard-service
                         +star
                         +serviceCard(cardService.islandtour)
-                    .col-sm-6.col-lg-3.my-2
+                    .col-sm-6.col-lg-3.my-2.lastcard-service
                         +star
                         +serviceCard(cardService.serf)
             hr.container.mb-5
@@ -130,11 +130,11 @@ html(lang="en")
                 .row.container-fluid.gy-2.m-0.d-flex.justify-content-center.align-center.question-block
                     .col-sm-12.col-lg
                         p.info додаткова інформація
-                    .col-sm-6.col-lg.house.p-3.mb-3.mx-2
+                    .col-sm.col-lg.house.p-3.mb-3.mx-2
                         +cardSave(fileSave.grafic)
-                    .col-sm-6.col-lg.people.p-3.mb-3.mx-2
+                    .col-sm.col-lg.people.p-3.mb-3.mx-2
                         +cardSave(fileSave.food)
-                    .col-sm-12.col-lg.text-center.contacts.mb-3.mx-2
+                    .col-sm.col-lg.text-center.contacts.mb-3.mx-2
                         p.quetion задати питання
                         p.text-quetion Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
                         a.phone(href="tel:+380505698511") +38 (050) 56 98 511
