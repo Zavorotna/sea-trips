@@ -20,14 +20,14 @@ html(lang="en")
     body
         include components/mixins
         header 
-            nav.navbar.navbar-expand-lg.bcg-nav.container.pb-3.navbar-dark
+            nav.navbar.navbar-expand-lg.bcg-nav.container.pb-5.navbar-dark
                 .container.d-flex.justify-content-between.gap-3.py-5
                     a.navbar-brand.logo(href='#') 
                         img(src="img/logo.png", alt="")
                     button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     .collapse.navbar-collapse#navbarSupportedContent
-                        ul.navbar-nav.me-auto.mb-2.mb-lg-0.flex-shrink-1.pt-2
+                        ul.navbar-nav.me-auto.mb-2.mb-lg-0.flex-shrink-1.pt-3
                             li.nav-item.ps-3
                                 a.nav-link.color(aria-current='page', href='#') головна      
                             li.nav-item.ps-3
@@ -48,8 +48,8 @@ html(lang="en")
                 a.cta.my-4.first-cta(href="#") детальніше
             .container.scroll-bottom-block.text-center.py-5.mx-auto
                 h2.mx-auto.py-5 обери свій план подорожі
-                p Наша фірма -лідер на ринку у своїй сфері
-                a.double-arrow.pb-4(href="#cardfirst")
+                p.pb-3 Наша фірма -лідер на ринку у своїй сфері
+                a.double-arrow.pb-5(href="#cardfirst")
         main
             section.card-first.container#cardfirst
                 .row.container
