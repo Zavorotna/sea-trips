@@ -264,19 +264,28 @@ p.price-tour
 .sea-bcg
     background: url("../img/second-bcg.webp") no-repeat center/cover
 
+.gap
+    display: flex
+    column-gap: 3rem
+    row-gap: 3rem    
+
 .cl-white
-    font-size: 3.7rem
+    font-size: 3.2rem
     letter-spacing: 0.1rem
     line-height: 1.2em
     text-transform: uppercase
     color: #ffffff
+    +media(425)
+        font-size: 3.7rem
 
 .cl-blue
-    font-size: 3.7rem
+    font-size: 3.2rem
     letter-spacing: 0.1rem
     line-height: 1.2em
     text-transform: uppercase
     color: #0099ff
+    +media(425)
+        font-size: 3.7rem
 
 .serf-block
     font-size: 1rem
@@ -290,13 +299,13 @@ p.price-tour
     display: flex
     flex-direction: column
     justify-content: space-between
-    min-height: 20rem
-    padding-bottom: 3rem
+    min-height: 22rem
+    padding-bottom: 4rem
     +border(true)
 
 .lapki
     position: absolute
-    top: -0.5rem
+    top: -1rem
     left: 50%
     transform: translate(-50%)
 
@@ -368,7 +377,6 @@ p.price-tour
         box-shadow: 0rem 0.26rem 0.7rem rgba(3,20,31,0.05)
         background-color: #ffffff
 
-
 .text-box
     min-height: 8rem
     +media(1024)
@@ -429,6 +437,9 @@ p.price-tour
     svg
         width: 8rem
 
+.file-block
+    min-height: 6.5rem
+
 .text
     font-size: 1.2rem
     line-height: 1.3em
@@ -449,7 +460,14 @@ p.price-tour
     font-weight: 400
 
 .download-cta
+    position: relative
     +cloud-btn(true)
+
+.cloud
+    position: absolute
+    top: 50%
+    left: 0.5rem
+    transform: translateY(-50%)
 
 .question-block
     +media(2200)
@@ -514,6 +532,9 @@ p.price-tour
     border-radius: 50%
     +media(2200)
         width: 30%
+
+.palm
+    padding-top: 3rem
 
 .footer
     background-color: #1a1a1a
