@@ -175,21 +175,22 @@ p.note
     font-weight: 400
 
 .first-card
+    position: relative
     figcaption
         min-width: 18rem
         transition: all .5s ease
         &:hover
             filter: drop-shadow(0rem 0.26rem 0.7rem rgba(3,20,31,0.05))
             background-color: #ffffff
+            transform: scale(1.1)
 .flag
-    position: relative
     &::before
         content: ""
         +flag(true)
 
 .star
     position: absolute
-    top: -3.9rem
+    top: -4.5rem
     left: 0.6rem
     z-index: 4
 
@@ -308,6 +309,9 @@ p.price-tour
     top: -1rem
     left: 50%
     transform: translate(-50%)
+    img
+        +media(2200)
+            width: 200%
 
 .descript
     font-size: 1rem
@@ -372,10 +376,12 @@ p.price-tour
     display: none
 
 .last-card
+    position: relative
     transition: all .5s ease
     &:hover
         box-shadow: 0rem 0.26rem 0.7rem rgba(3,20,31,0.05)
         background-color: #ffffff
+        transform: scale(1.1)
 
 .text-box
     min-height: 8rem

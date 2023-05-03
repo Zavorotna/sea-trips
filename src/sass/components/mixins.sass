@@ -10,12 +10,19 @@
     filter: drop-shadow(0rem 0.26rem 0.7rem rgba(193,139,1,0.24))
     border: 0.06rem solid transparent
     border-radius: 23rem
+    animation: btn 2s infinite
     transition: all 1s ease
     &:hover
         color: #ffb700
         filter: drop-shadow(0rem 0.26rem 0.7rem rgba(193,139,1,0.24))
         background-color: #fffaee
         border: 0.06rem solid  #ffb700
+    @keyframes btn
+        0%,
+        100%
+            transform: translate(5%) rotate(2deg)
+        50%
+            transform: translate(-5%) rotate(-2deg)
     @if $fixed
         width: 11.5rem
     @else 
@@ -65,7 +72,7 @@
 
 =flag($flag)
     position: absolute
-    top: -1.99rem
+    top: -3rem
     left: -3rem
     border: 3rem solid transparent
     border-top-color: #26cb15

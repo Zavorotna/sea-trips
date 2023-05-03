@@ -52,22 +52,19 @@ html(lang="en")
                 a.double-arrow.pb-5(href="#cardfirst")
         main
             section.card-first.container#cardfirst
-                .row.container#company
+                .row.container#company.mx-auto.m-0
                     .about-company.col-lg-3
                         h2 про нашу компанію
                         p Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                         a.cta.mt-4(href="#") детальніше
                         p.note.py-3 * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     .col
-                        .row.d-flex.justify-content-center.align-center
+                        .row.d-flex.justify-content-center.align-center.gy-4
                             .proposition.col.col-md-4
-                                p 
                                 +card(firstCard.velosport)
                             .proposition.col.col-md-4
-                                +star
                                 +card(firstCard.excursion)
                             .proposition.col.col-md-4
-                                +star
                                 +card(firstCard.special)
                                 a(href="#") 
                             .text-center
@@ -99,8 +96,10 @@ html(lang="en")
                             a.cta(href="#") детальніше
                         .col-md.border-box
                             .lapki
-                                svg(xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 8 8" id="double" fill="#ffb700")
-                                    path(d="M0 1v3h2c0 1.11-.89 2-2 2v1c1.65 0 3-1.35 3-3V1H0zm5 0v3h2c0 1.11-.89 2-2 2v1c1.65 0 3-1.35 3-3V1H5z")
+                                picture 
+                                    img(src="img/lapki.svg", alt="Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!")
+                                //- svg(xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 8 8" id="double" fill="#ffb700")
+                                //-     path(d="M0 1v3h2c0 1.11-.89 2-2 2v1c1.65 0 3-1.35 3-3V1H0zm5 0v3h2c0 1.11-.89 2-2 2v1c1.65 0 3-1.35 3-3V1H5z")
                             p.descript.my-4.p-5 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
                             .text-center.client-box
                                 p.name-client.m-0 Олег Набережний
@@ -113,16 +112,12 @@ html(lang="en")
                     p Гарячі праозиції, по-швидше обирай і поїхали!
                 .row.py-5.d-flex.justify-content-center.align-center
                     .col-sm-6.col-lg-3.my-2.lastcard-service
-                        +star
                         +serviceCard(cardService.romantic)
                     .col-sm-6.col-lg-3.my-2.lastcard-service
-                        +star
                         +serviceCard(cardService.velotour)
                     .col-sm-6.col-lg-3.my-2.lastcard-service
-                        +star
                         +serviceCard(cardService.islandtour)
                     .col-sm-6.col-lg-3.my-2.lastcard-service
-                        +star
                         +serviceCard(cardService.serf)
             hr.container.mb-5
             section.files.container.mb-5#contacts

@@ -1,6 +1,8 @@
 -
     let firstCard = {
         velosport: {
+            flag: false,
+            star: false,
             img: "img/velo-icon.png",
             alt: "velo",
             head: "Тур на велосипедах",
@@ -9,6 +11,8 @@
             description: "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
         },
         excursion: {
+            flag: true,
+            star: true,
             img: "img/circle.png",
             alt: "excursion",
             head: "Екскурсія на острів",
@@ -17,6 +21,8 @@
             description: "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
         },
         special: {
+            flag: true,
+            star: true,
             img: "img/think.png",
             alt: "Особливе замовлення",
             head: "Особливе замовлення",
@@ -29,24 +35,24 @@
 mixin card(firstCard)
     figure.first-card.my-0.mx-0
         figcaption.py-3.px-3.w-100
-            a(href="#") 
-                .block
-                .text-center
-                    img(src=firstCard.img, alt=firstCard.alt class="img")
-                    p.head.pt-4 #{firstCard.head}
-                    p.price #{firstCard.price}
-                        span.currensy #{firstCard.currensy}
-                p.description #{firstCard.description}
-
-mixin star(star)
-    p.flag
-        svg.star(xmlns="http://www.w3.org/2000/svg" width="1rem" height="12rem" fill="#ffffff" class="bi bi-star-fill" viewBox="0 0 16 16")
-            path(d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z")
+            a(href="#")
+            p(class= (firstCard.flag) ? "flag": "")
+                svg(class= (firstCard.star) ? "star": "none" xmlns="http://www.w3.org/2000/svg" width="1rem" height="12rem" fill="#ffffff" class="bi bi-star-fill" viewBox="0 0 16 16")
+                    path(d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z")
+            .block
+            .text-center
+                img(src=firstCard.img, alt=firstCard.alt class="img")
+                p.head.pt-4 #{firstCard.head}
+                p.price #{firstCard.price}
+                    span.currensy #{firstCard.currensy}
+            p.description #{firstCard.description}
 
 -
     let 
         cardService = {
             romantic: {
+                flag: true,
+                star: true,
                 velobox: false,
                 svg: false,
                 img: "img/boat.webp",
@@ -59,6 +65,8 @@ mixin star(star)
                 href: "#",
             },
             velotour: {
+                flag: true,
+                star: true,
                 velobox: true,
                 svg: true,
                 img: "img/velo.webp",
@@ -71,6 +79,8 @@ mixin star(star)
                 href: "#",
             },
             islandtour: {
+                flag: true,
+                star: true,
                 velobox: false,
                 svg: false,
                 img: "img/palm.webp",
@@ -83,6 +93,8 @@ mixin star(star)
                 href: "#",
             },
             serf: {
+                flag: true,
+                star: true,
                 velobox: false,
                 svg: false,
                 img: "img/serf.webp",
@@ -99,6 +111,9 @@ mixin star(star)
 mixin serviceCard(cardService) 
     figure.last-card 
         figcaption
+            p(class= (cardService.flag) ? "flag": "")
+                svg.star(xmlns="http://www.w3.org/2000/svg" width="1rem" height="12rem" fill="#ffffff" class="bi bi-star-fill" viewBox="0 0 16 16")
+                    path(d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z")
             p(class= (cardService.velobox) ? "left-box": "")
                 span(class= (cardService.svg) ? "velo-svg": "none")
                     svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="3rem" fill="#ffffff")
